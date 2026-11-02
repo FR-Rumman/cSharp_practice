@@ -1,19 +1,20 @@
-﻿using classPrc;
-
-Person person1 = new()
+﻿namespace classPrc
 {
-    firstName = "Fazla",
-    lastName = "Rabbi"
-};
-person1.displayFullName();
-
-Person peroson2 = new()
-{
-    firstName = "John",
-    lastName = "Doe"
-};
-peroson2.displayFullName();
-
-CalCulator c = new(10, 20);
-
-CalCulator c2 = new(30, 40);
+    class Program
+    {
+        public class Person2
+        {
+            public string name;
+            public void IndroDuce(string TO)
+            {
+                Console.WriteLine("hello {0} I am {1}", name, TO);
+            }
+        }
+        static void Main(string[] args)
+        {
+            var person = new Person2();
+            person.name = "Sakib";
+            person.IndroDuce("Rumman");
+        }
+    }
+}

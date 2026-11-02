@@ -4,40 +4,40 @@
     {
         static void Main(string[] args)
         {
-            //var number = new[] { 1, 2, 4, 3, 8, 7, 6, 5 };
-            ////length
-            //Console.WriteLine( "length"+number.Length);
+            var number = new[] { 1, 2, 4, 3, 8, 7, 6, 5 };
+            //length
+            Console.WriteLine("length" + number.Length);
 
-            ////IndexOf
+            //IndexOf
 
-            //var index = Array.IndexOf(number, 5);
-            //Console.WriteLine("index number of 5"+index);
+            var index = Array.IndexOf(number, 5);
+            Console.WriteLine("index number of 5" + index);
 
-            ////clear 
-            //Array.Clear(number, 0, 2);
-            //Console.WriteLine("Clear Effect");
-            //foreach (var n in number)
-            //    Console.WriteLine(n);
-            ////copy
+            //clear 
+            Array.Clear(number, 0, 2);
+            Console.WriteLine("Clear Effect");
+            foreach (var n in number)
+                Console.WriteLine(n);
+            //copy
 
-            //int[] another = new int[3];
-            //Array.Copy(number, another, 3);
+            int[] another = new int[3];
+            Array.Copy(number, another, 3);
 
-            //Console.WriteLine("another arry is ");
-            //foreach (var n in another)
-            //    Console.WriteLine(n);
+            Console.WriteLine("another arry is ");
+            foreach (var n in another)
+                Console.WriteLine(n);
 
-            ////sort
-            //Array.Sort(number);
-            //Console.WriteLine("sorted Array");
-            //foreach (var n in number)
-            //    Console.WriteLine(n);
+            //sort
+            Array.Sort(number);
+            Console.WriteLine("sorted Array");
+            foreach (var n in number)
+                Console.WriteLine(n);
 
-            ////reverse 
-            //Array.Reverse(number);
-            //Console.WriteLine("reversed Array");
-            //foreach (var n in number)
-            //    Console.WriteLine(n);
+            //reverse 
+            Array.Reverse(number);
+            Console.WriteLine("reversed Array");
+            foreach (var n in number)
+                Console.WriteLine(n);
 
             var numbers = new List<int>() { 1, 2, 3, 4 };
             numbers.Add(1);
