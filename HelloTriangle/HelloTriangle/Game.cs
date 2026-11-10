@@ -5,6 +5,7 @@ using OpenTK.Graphics.OpenGL4;
 using System;
 using System.Collections.Generic;
 using System.Text;
+using OpenTK.Windowing.GraphicsLibraryFramework;
 
 namespace HelloTriangle
 {
@@ -101,25 +102,34 @@ namespace HelloTriangle
         protected override void OnUpdateFrame(FrameEventArgs args)
         {
             base.OnUpdateFrame(args);
+            if (KeyboardState.IsKeyDown(Keys.K))
+            {
+                Close();
+            }
         }
         //funtion to load a file and return its contenets as a string
+
         public static string LoadShaderSouece(string filePath)
         {
-            string shaderSouce = "";
+            string path = Path.Combine(
+                AppContext.BaseDirectory,
+                "Shaders",
+                filePath
+            );
+
             try
             {
-                using (StreamReader reader = new StreamReader("../../../Shaders" + filePath))
-                {
-                    shaderSouce = reader.ReadToEnd();
-                }
+                Console.WriteLine("Loading: " + path);
+                return File.ReadAllText(path);
             }
-            catch(Exception e)
+            catch (Exception e)
             {
-                Console.WriteLine("failed to load shader source file: " + e.Message);
+                Console.WriteLine("Shader loading failed: " + e.Message);
+                return "";
             }
-            return shaderSouce;
         }
 
+
     }
-    
+
 }
